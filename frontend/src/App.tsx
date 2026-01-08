@@ -6,6 +6,7 @@ import {
 } from "./api/client";
 import { PredictionCard } from "./components/PredictionCard";
 import { ExplanationTabs } from "./components/ExplanationTabs";
+import { ChatbotSidebar } from "./components/ChatbotSidebar";
 
 const MODEL_OPTIONS = [
   "ensemble",
@@ -222,6 +223,9 @@ const App: React.FC = () => {
         <span>·</span>
         <span>Models trained on Kather colorectal histology MNIST dataset</span>
       </footer>
+
+      {/* Floating chatbot, available across the analysis page */}
+      <ChatbotSidebar currentResult={result} />
     </div>
   );
 };

@@ -9,6 +9,7 @@ import { ExplanationTabs } from "../components/ExplanationTabs";
 import { History } from "../components/History";
 import { IntestineModel } from "../components/IntestineModel";
 import { saveToHistory } from "../services/historyService";
+import { ChatbotSidebar } from "../components/ChatbotSidebar";
 
 const MODEL_OPTIONS = [
   "ensemble",
@@ -405,6 +406,9 @@ const AnalyzeSection: React.FC = () => {
           <History />
         </div>
       </div>
+
+      {/* Floating chatbot available on the analysis page */}
+      <ChatbotSidebar currentResult={result} />
     </section>
   );
 };
